@@ -1,7 +1,3 @@
-// ============================================
-// ENHANCED ABOUT.TSX
-// Copy this to: src/pages/About.tsx
-// ============================================
 
 import { motion } from "framer-motion";
 import {
@@ -201,7 +197,6 @@ const About = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 mix-blend-overlay z-10" />
-                {/* Replace with: <img src="/team-photo.jpg" alt="Our Team" className="w-full h-full object-cover" /> */}
                 <img
                   src="/public/Team photo 1.jpg"
                   alt="HandsOn Team"

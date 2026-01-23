@@ -1,8 +1,3 @@
-// ============================================
-// ENHANCED FOOTER.TSX
-// Copy this to: src/components/layout/Footer.tsx
-// ============================================
-
 import { Link } from "react-router-dom";
 import {
   Mail,

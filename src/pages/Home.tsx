@@ -1,7 +1,3 @@
-// ============================================
-// ENHANCED HOME.TSX
-// Copy this to: src/pages/Home.tsx
-// ============================================
 
 import { motion } from "framer-motion";
 import {

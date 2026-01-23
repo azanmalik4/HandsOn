@@ -1,7 +1,3 @@
-// ============================================
-// ENHANCED CONTACT.TSX
-// Copy this to: src/pages/Contact.tsx
-// ============================================
 
 import { useState } from "react";
 import { motion } from "framer-motion";

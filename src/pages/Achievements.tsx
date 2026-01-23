@@ -1,7 +1,3 @@
-// ============================================
-// ENHANCED ACHIEVEMENTS.TSX
-// Copy this to: src/pages/Achievements.tsx
-// ============================================
 
 import { motion } from "framer-motion";
 import { Trophy, Rocket, Users, Award, Star, Zap, Target, CheckCircle, Sparkles, TrendingUp } from "lucide-react";

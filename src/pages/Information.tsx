@@ -1,7 +1,3 @@
-// ============================================
-// ENHANCED INFORMATION.TSX
-// Copy this to: src/pages/Information.tsx
-// ============================================
 
 import { motion } from "framer-motion";
 import { Hand, Monitor, Cpu, MessageSquare, Users, GraduationCap, Briefcase, Heart, ArrowRight, Zap, Shield, Brain, TrendingUp } from "lucide-react";

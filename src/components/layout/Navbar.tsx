@@ -1,8 +1,3 @@
-// ============================================
-// ENHANCED NAVBAR.TSX
-// Copy this to: src/components/layout/Navbar.tsx
-// ============================================
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Hand, Sparkles } from "lucide-react";
