@@ -25,21 +25,21 @@ const contactInfo = [
     icon: Mail,
     title: "Email Us",
     description: "Our team will respond within 24 hours",
-    value: "contact@handsoncommunicator.com",
+    value: "handsoncommunicator@gmail.com",
     color: "from-blue-500 to-cyan-500",
   },
   {
     icon: Phone,
     title: "Call Us",
     description: "Monday to Friday, 9am - 6pm EST",
-    value: "+1 (555) 123-4567",
+    value: "+923178889860",
     color: "from-purple-500 to-pink-500",
   },
   {
     icon: MapPin,
     title: "Visit Us",
     description: "Our headquarters",
-    value: "123 Innovation Drive, Tech City, TC 12345",
+    value: "Power House Chowrangi North Karachi, Pakistan",
     color: "from-green-500 to-emerald-500",
   },
 ];
@@ -358,10 +358,10 @@ const Contact = () => {
                     Our Location
                   </h4>
                   <p className="text-muted-foreground">
-                    123 Innovation Drive, Tech City, TC 12345
+                    Power House Chowrangi Karachi
                   </p>
                   <p className="text-sm text-muted-foreground mt-4">
-                    Interactive map will be displayed here
+                    Interactive map 
                   </p>
                 </div>
               </div>

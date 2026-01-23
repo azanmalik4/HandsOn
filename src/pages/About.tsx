@@ -4,28 +4,42 @@
 // ============================================
 
 import { motion } from "framer-motion";
-import { Target, Lightbulb, CheckCircle, Users, Award, TrendingUp, Heart, Zap, Shield } from "lucide-react";
+import {
+  Target,
+  Lightbulb,
+  CheckCircle,
+  Users,
+  Award,
+  TrendingUp,
+  Heart,
+  Zap,
+  Shield,
+} from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+// import teamphoto from "../../public/Team photo 1.jpg";
 
 const teamValues = [
   {
     icon: Target,
     title: "Mission-Driven",
-    description: "Every decision we make is guided by our commitment to accessibility and inclusion.",
+    description:
+      "Every decision we make is guided by our commitment to accessibility and inclusion.",
     color: "from-blue-500 to-cyan-500",
   },
   {
     icon: Lightbulb,
     title: "Innovation First",
-    description: "We constantly push the boundaries of what's possible with assistive technology.",
+    description:
+      "We constantly push the boundaries of what's possible with assistive technology.",
     color: "from-purple-500 to-pink-500",
   },
   {
     icon: Users,
     title: "Community Focused",
-    description: "We work closely with the deaf community to ensure our solutions meet real needs.",
+    description:
+      "We work closely with the deaf community to ensure our solutions meet real needs.",
     color: "from-green-500 to-emerald-500",
   },
 ];
@@ -46,9 +60,9 @@ const solutionPoints = [
 
 const stats = [
   { value: "2022", label: "Founded", icon: Award },
-  { value: "50K+", label: "Users", icon: Users },
+  { value: "100+", label: "Users", icon: Users },
   { value: "98%", label: "Accuracy", icon: TrendingUp },
-  { value: "15+", label: "Languages", icon: Zap },
+  { value: "5+", label: "Languages", icon: Zap },
 ];
 
 const About = () => {
@@ -59,7 +73,10 @@ const About = () => {
         {/* Animated background */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
         </div>
 
         <div className="section-container">
@@ -86,8 +103,8 @@ const About = () => {
               transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground leading-relaxed"
             >
-              HandsOn Communicator was born from a simple belief: everyone deserves 
-              the ability to communicate freely and be understood.
+              HandsOn Communicator was born from a simple belief: everyone
+              deserves the ability to communicate freely and be understood.
             </motion.p>
           </div>
         </div>
@@ -99,7 +116,7 @@ const About = () => {
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent rounded-full blur-3xl" />
         </div>
-        
+
         <div className="section-container relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
@@ -140,30 +157,37 @@ const About = () => {
                 Our Beginning
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Pioneering Assistive <span className="gradient-text">Communication</span> Technology
+                Pioneering Assistive{" "}
+                <span className="gradient-text">Communication</span> Technology
               </h2>
               <p className="text-muted-foreground mb-4 leading-relaxed text-lg">
-                HandsOn Communicator is an innovative startup focused on developing 
-                cutting-edge assistive technology solutions. Our flagship product bridges 
-                the communication gap between sign language users and the hearing world.
+                HandsOn Communicator is an innovative startup focused on
+                developing cutting-edge assistive technology solutions. Our
+                flagship product bridges the communication gap between sign
+                language users and the hearing world.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Founded by a diverse team of engineers, accessibility advocates, and 
-                members of the deaf community, we bring together unique perspectives 
-                and expertise to create solutions that truly make a difference.
+                Founded by a diverse team of engineers, accessibility advocates,
+                and members of the deaf community, we bring together unique
+                perspectives and expertise to create solutions that truly make a
+                difference.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl border border-primary/20 group hover:border-primary/40 transition-all">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Award className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-foreground font-semibold">Award Winning</span>
+                  <span className="text-foreground font-semibold">
+                    Award Winning
+                  </span>
                 </div>
                 <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl border border-primary/20 group hover:border-primary/40 transition-all">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <TrendingUp className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-foreground font-semibold">Fast Growing</span>
+                  <span className="text-foreground font-semibold">
+                    Fast Growing
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -178,10 +202,10 @@ const About = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 mix-blend-overlay z-10" />
                 {/* Replace with: <img src="/team-photo.jpg" alt="Our Team" className="w-full h-full object-cover" /> */}
-                <ImagePlaceholder
-                  aspectRatio="square"
-                  label="Team Photo"
-                  className="w-full"
+                <img
+                  src="/public/Team photo 1.jpg"
+                  alt="HandsOn Team"
+                  className="w-full h-[45rem] object-cover rounded-2xl"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-3xl opacity-20 blur-2xl -z-10" />
@@ -215,11 +239,14 @@ const About = () => {
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center shadow-lg">
                     <Target className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">The Problem</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    The Problem
+                  </h3>
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Communication barriers create significant challenges for the deaf and 
-                  hard-of-hearing community in education, employment, and daily life.
+                  Communication barriers create significant challenges for the
+                  deaf and hard-of-hearing community in education, employment,
+                  and daily life.
                 </p>
                 <ul className="space-y-4">
                   {problemPoints.map((point, index) => (
@@ -232,7 +259,9 @@ const About = () => {
                       className="flex items-start gap-3 group/item"
                     >
                       <div className="w-2 h-2 rounded-full bg-gradient-to-br from-red-500 to-orange-500 mt-2 flex-shrink-0 group-hover/item:scale-150 transition-transform" />
-                      <span className="text-muted-foreground text-sm leading-relaxed group-hover/item:text-foreground transition-colors">{point}</span>
+                      <span className="text-muted-foreground text-sm leading-relaxed group-hover/item:text-foreground transition-colors">
+                        {point}
+                      </span>
                     </motion.li>
                   ))}
                 </ul>
@@ -253,11 +282,14 @@ const About = () => {
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
                     <Lightbulb className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Our Solution</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Our Solution
+                  </h3>
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  HandsOn Communicator provides real-time, AI-powered translation that 
-                  makes communication accessible, affordable, and seamless.
+                  HandsOn Communicator provides real-time, AI-powered
+                  translation that makes communication accessible, affordable,
+                  and seamless.
                 </p>
                 <ul className="space-y-4">
                   {solutionPoints.map((point, index) => (
@@ -270,7 +302,9 @@ const About = () => {
                       className="flex items-start gap-3 group/item"
                     >
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 group-hover/item:scale-110 transition-transform" />
-                      <span className="text-muted-foreground text-sm leading-relaxed group-hover/item:text-foreground transition-colors">{point}</span>
+                      <span className="text-muted-foreground text-sm leading-relaxed group-hover/item:text-foreground transition-colors">
+                        {point}
+                      </span>
                     </motion.li>
                   ))}
                 </ul>
@@ -301,7 +335,9 @@ const About = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative bg-card rounded-3xl p-8 shadow-card border border-border group-hover:border-primary/30 transition-all text-center h-full">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all`}>
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all`}
+                  >
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">

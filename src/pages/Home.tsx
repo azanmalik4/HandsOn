@@ -4,38 +4,52 @@
 // ============================================
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageSquare, Brain, Users, Heart, Zap, Shield, Globe, Sparkles, TrendingUp } from "lucide-react";
+import {
+  ArrowRight,
+  MessageSquare,
+  Brain,
+  Users,
+  Heart,
+  Zap,
+  Shield,
+  Globe,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Layout } from "@/components/layout/Layout";
-// Import your actual images
-// import gloveImage from '../../public/Glove1.jpg';
+
 
 const features = [
   {
     icon: MessageSquare,
     title: "Real-Time Translation",
-    description: "Instantly translate sign language to text and speech, enabling seamless conversations.",
+    description:
+      "Instantly translate sign language to text and speech, enabling seamless conversations.",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     icon: Brain,
     title: "AI-Powered Recognition",
-    description: "Advanced machine learning algorithms ensure accurate gesture interpretation.",
+    description:
+      "Advanced machine learning algorithms ensure accurate gesture interpretation.",
     gradient: "from-purple-500 to-pink-500",
   },
   {
     icon: Users,
     title: "Universal Access",
-    description: "Designed for everyone, from individuals to educational institutions and workplaces.",
+    description:
+      "Designed for everyone, from individuals to educational institutions and workplaces.",
     gradient: "from-green-500 to-emerald-500",
   },
   {
     icon: Shield,
     title: "Privacy First",
-    description: "Your data stays secure with end-to-end encryption and local processing options.",
+    description:
+      "Your data stays secure with end-to-end encryption and local processing options.",
     gradient: "from-orange-500 to-red-500",
   },
 ];
@@ -49,17 +63,20 @@ const stats = [
 
 const testimonials = [
   {
-    quote: "HandsOn Communicator has transformed how I communicate at work. It's incredibly accurate!",
+    quote:
+      "HandsOn Communicator has transformed how I communicate at work. It's incredibly accurate!",
     author: "Sarah M.",
     role: "Software Engineer",
   },
   {
-    quote: "Finally, technology that truly understands the needs of the deaf community.",
+    quote:
+      "Finally, technology that truly understands the needs of the deaf community.",
     author: "David L.",
     role: "Teacher",
   },
   {
-    quote: "The real-time translation is seamless. This is the future of accessibility.",
+    quote:
+      "The real-time translation is seamless. This is the future of accessibility.",
     author: "Emily R.",
     role: "Healthcare Professional",
   },
@@ -73,7 +90,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background -z-10" />
         <div className="absolute inset-0 overflow-hidden -z-10">
           <div className="absolute top-1/4 -left-48 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute bottom-1/4 -right-48 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
         </div>
 
         <div className="section-container py-12 md:py-20 lg:py-28 w-full">
@@ -90,9 +110,11 @@ const Home = () => {
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-accent/10 text-primary rounded-full mb-6 border border-primary/20"
               >
                 <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-semibold">AI-Powered Communication</span>
+                <span className="text-sm font-semibold">
+                  AI-Powered Communication
+                </span>
               </motion.div>
-              
+
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-[1.1]">
                 Breaking Barriers in{" "}
                 <span className="relative inline-block">
@@ -105,20 +127,30 @@ const Home = () => {
                   />
                 </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl">
-                HandsOn Communicator bridges the gap between sign language and spoken language, 
-                empowering seamless connections for the deaf and hard-of-hearing community.
+                HandsOn Communicator bridges the gap between sign language and
+                spoken language, empowering seamless connections for the deaf
+                and hard-of-hearing community.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="group shadow-lg hover:shadow-xl transition-all" asChild>
+                <Button
+                  size="lg"
+                  className="group shadow-lg hover:shadow-xl transition-all"
+                  asChild
+                >
                   <Link to="/contact">
-                    Get Started 
+                    Get Started
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-2" asChild>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2"
+                  asChild
+                >
                   <Link to="/information">Learn More</Link>
                 </Button>
               </div>
@@ -132,14 +164,19 @@ const Home = () => {
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
                     {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent border-2 border-background" />
+                      <div
+                        key={i}
+                        className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent border-2 border-background"
+                      />
                     ))}
                   </div>
                   <span>50K+ users trust us</span>
                 </div>
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <span key={i} className="text-yellow-500">★</span>
+                    <span key={i} className="text-yellow-500">
+                      ★
+                    </span>
                   ))}
                   <span className="ml-1">4.9/5 rating</span>
                 </div>
@@ -154,11 +191,11 @@ const Home = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 mix-blend-overlay z-10" />
-                {/* Replace ImagePlaceholder with: <img src={gloveImage} alt="HandsOn Glove" className="w-full h-full object-cover" /> */}
-                <ImagePlaceholder
-                  aspectRatio="square"
-                  label="HandsOn Glove Demo"
-                  className="w-full"
+               
+                <img
+                  src="/Glove1.jpg"
+                  alt="HandsOn Communicator Glove"
+                  className="w-[80rem] h-[40rem] object-cover rounded-3xl"
                 />
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -171,15 +208,22 @@ const Home = () => {
                       <Zap className="w-6 h-6 text-white" />
                     </div>
                     <div className="min-w-0">
-                      <p className="font-semibold text-foreground">Real-Time Translation</p>
-                      <p className="text-sm text-muted-foreground">98% accuracy • Instant results</p>
+                      <p className="font-semibold text-foreground">
+                        Real-Time Translation
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        98% accuracy • Instant results
+                      </p>
                     </div>
                   </div>
                 </motion.div>
               </div>
 
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full blur-2xl opacity-50 animate-pulse" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-accent to-primary rounded-full blur-2xl opacity-50 animate-pulse" style={{ animationDelay: '1s' }} />
+              <div
+                className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-accent to-primary rounded-full blur-2xl opacity-50 animate-pulse"
+                style={{ animationDelay: "1s" }}
+              />
             </motion.div>
           </div>
         </div>
@@ -191,7 +235,7 @@ const Home = () => {
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent rounded-full blur-3xl" />
         </div>
-        
+
         <div className="section-container relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
@@ -238,9 +282,11 @@ const Home = () => {
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl blur-xl -z-10" />
-                
+
                 <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-all duration-300 h-full border border-border group-hover:border-primary/50 group-hover:-translate-y-2">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
+                  <div
+                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}
+                  >
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -289,18 +335,19 @@ const Home = () => {
                 <Heart className="w-4 h-4" />
                 Our Mission
               </span>
-              
+
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Creating an Inclusive World Through{" "}
                 <span className="gradient-text">Technology</span>
               </h2>
-              
+
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                We believe communication is a fundamental human right. Our mission is to leverage 
-                cutting-edge AI technology to break down communication barriers and create meaningful 
-                connections for the deaf and hard-of-hearing community.
+                We believe communication is a fundamental human right. Our
+                mission is to leverage cutting-edge AI technology to break down
+                communication barriers and create meaningful connections for the
+                deaf and hard-of-hearing community.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
                   { icon: Heart, text: "Accessibility First" },
@@ -317,7 +364,9 @@ const Home = () => {
                     className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors group"
                   >
                     <item.icon className="w-5 h-5 text-primary group-hover:scale-110 transition-transform flex-shrink-0" />
-                    <span className="text-foreground font-medium text-sm">{item.text}</span>
+                    <span className="text-foreground font-medium text-sm">
+                      {item.text}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -353,7 +402,9 @@ const Home = () => {
               >
                 <div className="flex gap-1 mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-yellow-500 text-lg">★</span>
+                    <span key={star} className="text-yellow-500 text-lg">
+                      ★
+                    </span>
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed italic">
@@ -362,8 +413,12 @@ const Home = () => {
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex-shrink-0" />
                   <div className="min-w-0">
-                    <p className="font-semibold text-foreground">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p className="font-semibold text-foreground">
+                      {testimonial.author}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -377,7 +432,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
         </div>
 
         <div className="section-container text-center relative z-10">
@@ -401,18 +459,23 @@ const Home = () => {
               Ready to Transform Communication?
             </h2>
             <p className="text-white/90 text-lg md:text-xl mb-10 leading-relaxed">
-              Join thousands of users who are already experiencing seamless communication 
-              with HandsOn Communicator.
+              Join thousands of users who are already experiencing seamless
+              communication with HandsOn Communicator.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" variant="secondary" className="shadow-xl hover:shadow-2xl" asChild>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="shadow-xl hover:shadow-2xl"
+                asChild
+              >
                 <Link to="/contact">
                   Contact Us <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button 
-                size="lg" 
-                className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 backdrop-blur-sm" 
+              <Button
+                size="lg"
+                className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 backdrop-blur-sm"
                 asChild
               >
                 <Link to="/about">Learn About Us</Link>
