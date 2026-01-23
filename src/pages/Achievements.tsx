@@ -264,9 +264,9 @@ const Achievements = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { value: "3", label: "Years of Innovation", icon: Rocket },
-              { value: "50K+", label: "Active Users", icon: Users },
-              { value: "4", label: "Major Awards", icon: Trophy },
+              { value: "2", label: "Years of Innovation", icon: Rocket },
+              { value: "100+", label: "Active Users", icon: Users },
+              { value: "3", label: "Major Awards", icon: Trophy },
               { value: "98%", label: "User Satisfaction", icon: TrendingUp },
             ].map((stat, index) => (
               <motion.div

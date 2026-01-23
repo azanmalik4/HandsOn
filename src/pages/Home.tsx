@@ -1,10 +1,13 @@
-
 import { motion } from "framer-motion";
 import {
   ArrowRight,
   MessageSquare,
   Brain,
   Users,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
   Heart,
   Zap,
   Shield,
@@ -17,7 +20,6 @@ import { Button } from "@/components/ui/button";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Layout } from "@/components/layout/Layout";
-
 
 const features = [
   {
@@ -51,10 +53,26 @@ const features = [
 ];
 
 const stats = [
-  { value: "50K+", label: "Active Users", icon: Users },
+  { value: "100+", label: "Active Users", icon: Users },
   { value: "98%", label: "Accuracy Rate", icon: TrendingUp },
-  { value: "15+", label: "Languages", icon: Globe },
+  { value: "5+", label: "Languages", icon: Globe },
   { value: "24/7", label: "Support", icon: Heart },
+];
+const socialLinks = [
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/company/handsoncommunicator/?viewAsMember=true",
+    label: "LinkedIn",
+    color: "hover:bg-blue-600",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/handsoncommunicator/?hl=en",
+    label: "Instagram",
+    color: "hover:bg-pink-500",
+  },
+  // { icon: Facebook, href: "#", label: "Facebook", color: "hover:bg-blue-500" },
+  // { icon: Twitter, href: "#", label: "Twitter", color: "hover:bg-sky-500" },
 ];
 
 const testimonials = [
@@ -81,7 +99,7 @@ const testimonials = [
 const Home = () => {
   return (
     <Layout>
-      {/* Hero Section - Enhanced */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background -z-10" />
         <div className="absolute inset-0 overflow-hidden -z-10">
@@ -149,6 +167,23 @@ const Home = () => {
                 >
                   <Link to="/information">Learn More</Link>
                 </Button>
+                <div className="flex gap-3">
+                  {socialLinks.map((social, index) => (
+                    <motion.a
+                      key={social.label}
+                      href={social.href}
+                      aria-label={social.label}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.05 }}
+                      className={`group relative w-10 h-10 rounded-xl bg-primary-foreground/10 hover:text-primary-foreground flex items-center justify-center transition-all duration-300 ${social.color} hover:scale-110`}
+                    >
+                      <social.icon className="w-4 h-4 relative z-10" />
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity blur-sm" />
+                    </motion.a>
+                  ))}
+                </div>
               </div>
 
               <motion.div
@@ -187,7 +222,7 @@ const Home = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 mix-blend-overlay z-10" />
-               
+
                 <img
                   src="/Glove1.jpg"
                   alt="HandsOn Communicator Glove"

@@ -23,8 +23,6 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  // { icon: Facebook, href: "#", label: "Facebook", color: "hover:bg-blue-500" },
-  // { icon: Twitter, href: "#", label: "Twitter", color: "hover:bg-sky-500" },
   {
     icon: Linkedin,
     href: "https://www.linkedin.com/company/handsoncommunicator/?viewAsMember=true",
@@ -37,6 +35,8 @@ const socialLinks = [
     label: "Instagram",
     color: "hover:bg-pink-500",
   },
+   // { icon: Facebook, href: "#", label: "Facebook", color: "hover:bg-blue-500" },
+  // { icon: Twitter, href: "#", label: "Twitter", color: "hover:bg-sky-500" },
 ];
 
 export const Footer = () => {
@@ -226,12 +226,13 @@ export const Footer = () => {
               <span>© 2024 HandsOn Communicator. All rights reserved.</span>
               <span className="hidden md:inline">•</span>
               <span className="flex items-center gap-1 text-primary-foreground/70">
+               Made by
                 <a
                   className="text-primary-foreground/60 hover:text-primary transition-colors relative group"
                   href="#"
                 >
                   {" "}
-                  Made by Muhammad Azan Shakil
+                  <span>Muhammad Azan Shakil</span>
                 </a>
               </span>
             </p>
