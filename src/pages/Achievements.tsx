@@ -12,7 +12,6 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const milestones = [

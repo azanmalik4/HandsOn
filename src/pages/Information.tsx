@@ -195,12 +195,12 @@ const Information = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/10 mix-blend-overlay z-10" />
-              {/* Replace with: <img src="/workflow-diagram.jpg" alt="Product Workflow" className="w-full h-full object-cover" /> */}
-              <ImagePlaceholder
-                aspectRatio="wide"
-                label="Product Workflow Diagram"
-                className="w-full"
-              />
+              {/* Workflow Diagram /> */}
+                <img
+                  src="/Workflow diagram.png"
+                  alt="HandsOn Communicator Glove"
+                  className="w-[80rem] h-[40rem] object-cover rounded-3xl"
+                />
             </div>
             <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-primary to-accent rounded-3xl opacity-20 blur-3xl -z-10" />
             <div className="absolute -top-8 -left-8 w-40 h-40 bg-gradient-to-br from-accent to-primary rounded-3xl opacity-20 blur-3xl -z-10" />
@@ -269,11 +269,11 @@ const Information = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 mix-blend-overlay z-10" />
-                {/* Replace with: <img src="/ai-tech-diagram.jpg" alt="AI Technology" className="w-full h-full object-cover" /> */}
-                <ImagePlaceholder
-                  aspectRatio="square"
-                  label="AI Technology Diagram"
-                  className="w-full"
+                {/* AI Workflow Diagram */}
+                <img
+                  src="/AI Workflow.png"
+                  alt="HandsOn Communicator Glove"
+                  className="w-[80rem] h-[40rem] object-cover rounded-3xl"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-primary to-accent rounded-3xl opacity-20 blur-3xl -z-10" />

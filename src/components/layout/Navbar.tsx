@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "../../pages/ThemeToggle"; // ADD THIS
+import { ThemeToggle } from "../../pages/ThemeToggle"; 
 import logo from '../../../public/handsON.jpeg';
 
 const navLinks = [
@@ -11,7 +11,7 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Achievements", path: "/achievements" },
   { name: "Information", path: "/information" },
-  { name: "Product", path: "/product" }, // ADD THIS
+  { name: "Product", path: "/product" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -103,7 +103,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               
-              {/* Theme Toggle - REPLACES Get Started Button */}
+              {/* Theme Toggle */}
               <div className="ml-2 lg:ml-4 flex items-center gap-3">
                 <ThemeToggle />
               </div>
