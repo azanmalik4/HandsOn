@@ -318,47 +318,60 @@ const Achievements = () => {
       </section>
       {/* Certificates Section */}
       <section className="py-16 md:py-24 lg:py-32 bg-secondary/50">
-        <div className="section-container">
-          <SectionHeading
-            badge="Certifications"
-            title="Certificates & Recognition"
-            description="Official certifications and partnerships that validate our commitment to quality."
-          />
+  <div className="section-container">
+    <SectionHeading
+      badge="Certifications"
+      title="Certificates & Recognition"
+      description="Official certifications and partnerships that validate our commitment to quality."
+    />
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {["Inovista Startup League", "Certificate 2", "Certificate 3"].map(
-              (label, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="group relative"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative rounded-3xl overflow-hidden shadow-card hover:shadow-elevated transition-all border border-border group-hover:border-primary/30">
-                    {/* Replace with: <img src={`/certificate-${i + 1}.jpg`} alt={label} className="w-full h-full object-cover" /> */}
-                    <img
-                      src="/Innovista startup league.jpg"
-                      alt="HandsOn Communicator Glove"
-                      className="w-[80rem] h-[20rem] object-cover rounded-3xl"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                      <div className="text-white">
-                        <p className="font-semibold text-lg">{label}</p>
-                        <p className="text-sm text-white/80">
-                          Won the Karachi regional round 
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ),
-            )}
+    <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+      {[
+        {
+          image: "/Innovista startup league.jpg",
+          title: "Inovista Startup League",
+          description: "Won the Karachi regional round"
+        },
+        {
+          image: "/SEE_Pakistan.jpg",  
+          title: "SEE Pakistan ",
+          description: "Selected in Top 100 Stratups Nationwide"
+        },
+        {
+          image: "/IU_Spectrum.jpg", 
+          title: "Idea Verse",
+          description: "Won the Idea verse Event at Iqra University"
+        }
+      ].map((cert, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+          className="group relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="relative rounded-3xl overflow-hidden shadow-card hover:shadow-elevated transition-all border border-border group-hover:border-primary/30">
+            <img
+              src={cert.image}
+              alt={cert.title}
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 dark:from-gray-100/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+              <div className="text-white dark:text-gray-900">
+                <p className="font-semibold text-lg mb-1">{cert.title}</p>
+                <p className="text-sm text-white/80 dark:text-gray-900/80">
+                  {cert.description}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
     </Layout>
   );
 };

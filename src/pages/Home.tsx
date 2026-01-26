@@ -348,7 +348,7 @@ const Home = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 {/* mission image */}
                 <img
-                  src="/public/Mission and Vission.png"
+                  src="/Mission and Vission.png"
                   alt="HandsOn Communicator Glove"
                   className="w-[80rem] h-[40rem] object-cover rounded-3xl"
                 />
