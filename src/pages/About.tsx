@@ -368,11 +368,9 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/10 mix-blend-overlay z-10" />
               {/* Team Image */}
               <img
-                  src="/public/Team Image.jpg "
+                  src="/public/Team_Image.jpg "
                   alt="HandsOn Communicator Glove"
                   className="w-[80rem] h-[30rem] object-cover rounded-3xl"
-                  width={300}
-                  height={200}
                 />
             </div>
             <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-primary to-accent rounded-3xl opacity-20 blur-3xl -z-10" />
