@@ -4,12 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* HandsOn Communicator Design System */
+/* HandsOn Communicator Design System - Dark Mode Ready */
 
 @layer base {
   :root {
     /* Core brand colors */
-    --background: 210 20% 98%;
+    --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -18,10 +18,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* Primary Blue - Brand Color */
-    --primary: 224 78% 48%;
+    /* Primary Blue - Brand Color (slightly brighter for dark mode) */
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 224 78% 95%;
+    --primary-light: 217 91% 95%;
 
     /* Secondary - Light grays */
     --secondary: 210 20% 96%;
@@ -32,7 +32,7 @@
     --muted-foreground: 215 16% 47%;
 
     /* Accent - Softer blue */
-    --accent: 224 60% 60%;
+    --accent: 217 75% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -40,68 +40,75 @@
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 224 78% 48%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
     /* Custom shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(224 78% 48% / 0.08), 0 4px 16px -4px hsl(224 78% 48% / 0.12);
-    --shadow-card: 0 4px 24px -8px hsl(224 78% 48% / 0.1), 0 8px 32px -12px hsl(224 78% 48% / 0.08);
-    --shadow-elevated: 0 8px 40px -12px hsl(224 78% 48% / 0.15), 0 16px 64px -24px hsl(224 78% 48% / 0.1);
-
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(224 78% 48%) 0%, hsl(224 60% 60%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(210 15% 94%) 100%);
+    --shadow-soft: 0 2px 8px -2px hsl(217 91% 60% / 0.08), 0 4px 16px -4px hsl(217 91% 60% / 0.12);
+    --shadow-card: 0 4px 24px -8px hsl(217 91% 60% / 0.1), 0 8px 32px -12px hsl(217 91% 60% / 0.08);
+    --shadow-elevated: 0 8px 40px -12px hsl(217 91% 60% / 0.15), 0 16px 64px -24px hsl(217 91% 60% / 0.1);
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 224 78% 48%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 20% 96%;
     --sidebar-accent-foreground: 222 47% 11%;
     --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 224 78% 48%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    --background: 222 47% 8%;
+    /* Dark mode colors - optimized for readability */
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 11%;
+    --card: 217 33% 17%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 11%;
+    --popover: 217 33% 17%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 224 78% 55%;
+    /* Primary - Brighter in dark mode for better contrast */
+    --primary: 217 91% 65%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 224 50% 20%;
+    --primary-light: 217 50% 25%;
 
-    --secondary: 217 33% 17%;
+    /* Secondary - Darker grays for dark mode */
+    --secondary: 217 33% 20%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    /* Muted - Adjusted for dark mode */
+    --muted: 217 33% 20%;
+    --muted-foreground: 215 20% 70%;
 
-    --accent: 224 60% 50%;
+    /* Accent - Slightly brighter in dark mode */
+    --accent: 217 75% 70%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 63% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 224 78% 55%;
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 217 91% 65%;
 
-    --sidebar-background: 222 47% 8%;
+    /* Dark mode shadows - softer */
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3), 0 4px 16px -4px hsl(0 0% 0% / 0.2);
+    --shadow-card: 0 4px 24px -8px hsl(0 0% 0% / 0.4), 0 8px 32px -12px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 8px 40px -12px hsl(0 0% 0% / 0.5), 0 16px 64px -24px hsl(0 0% 0% / 0.4);
+
+    /* Sidebar dark mode */
+    --sidebar-background: 222 47% 11%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 224 78% 55%;
+    --sidebar-primary: 217 91% 65%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent: 217 33% 20%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 224 78% 55%;
+    --sidebar-border: 217 33% 25%;
+    --sidebar-ring: 217 91% 65%;
   }
 }
 
@@ -118,6 +125,16 @@
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
+
+  /* Improved gradient text for dark mode */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  /* Ensure gradients work in dark mode */
+  .dark .gradient-text {
+    background-image: linear-gradient(to right, hsl(217 91% 70%), hsl(217 75% 75%));
+  }
 }
 
 @layer components {
@@ -129,11 +146,113 @@
     @apply bg-muted/50 border-2 border-dashed border-border rounded-xl flex items-center justify-center text-muted-foreground;
   }
 
+  /* Enhanced card hover for dark mode */
   .card-hover {
     @apply transition-all duration-300 hover:shadow-[var(--shadow-elevated)] hover:-translate-y-1;
   }
 
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  /* Improved shadows for both modes */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
   }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Prevent transition on specific elements */
+.no-transition,
+.no-transition * {
+  transition: none !important;
+}
+
+/* Custom scrollbar - works in both modes */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Dark mode specific scrollbar */
+.dark ::-webkit-scrollbar-track {
+  @apply bg-card;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-primary/60;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/80;
+}
+
+/* Selection colors */
+::selection {
+  @apply bg-primary/20 text-foreground;
+}
+
+.dark ::selection {
+  @apply bg-primary/30 text-foreground;
+}
+
+/* Focus visible styles */
+*:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+}
+
+/* Ensure images don't break in dark mode */
+img {
+  @apply transition-opacity duration-300;
+}
+
+.dark img {
+  @apply opacity-90 hover:opacity-100;
+}
+
+/* Form elements dark mode */
+.dark input,
+.dark textarea,
+.dark select {
+  color-scheme: dark;
+}
+
+/* Placeholder text in dark mode */
+.dark ::placeholder {
+  @apply text-muted-foreground/50;
 }

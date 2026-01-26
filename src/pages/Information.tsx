@@ -338,60 +338,60 @@ const Information = () => {
       </section>
 
       {/* Impact Stats */}
-      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-foreground via-foreground/95 to-foreground text-primary-foreground">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent rounded-full blur-3xl" />
-        </div>
+      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 dark:from-gray-100 dark:via-gray-50 dark:to-gray-100 text-white dark:text-gray-900">
+  <div className="absolute inset-0 opacity-5 dark:opacity-10">
+    <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary rounded-full blur-3xl" />
+    <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent rounded-full blur-3xl" />
+  </div>
 
-        <div className="section-container relative z-10">
-          <div className="text-center mb-12">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-            >
-              Our Impact in Numbers
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-primary-foreground/70 text-lg max-w-2xl mx-auto"
-            >
-              Real results from real users around the world.
-            </motion.p>
-          </div>
+  <div className="section-container relative z-10">
+    <div className="text-center mb-12">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white dark:text-gray-900"
+      >
+        Our Impact in Numbers
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1 }}
+        className="text-gray-300 dark:text-gray-600 text-lg max-w-2xl mx-auto"
+      >
+        Real results from real users around the world.
+      </motion.p>
+    </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: "50K+", label: "Active Users", icon: Users },
-              { value: "2M+", label: "Translations Daily", icon: MessageSquare },
-              { value: "98%", label: "Accuracy Rate", icon: TrendingUp },
-              { value: "15+", label: "Sign Languages", icon: Hand },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/20 backdrop-blur-sm mb-4 group-hover:scale-110 transition-transform">
-                  <stat.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-primary-foreground/70 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {[
+        { value: "100+", label: "Active Users", icon: Users },
+        { value: "100k+", label: "Translations Daily", icon: MessageSquare },
+        { value: "98%", label: "Accuracy Rate", icon: TrendingUp },
+        { value: "5+", label: "Sign Languages", icon: Hand },
+      ].map((stat, index) => (
+        <motion.div
+          key={stat.label}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="text-center group"
+        >
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/20 dark:bg-primary/30 backdrop-blur-sm mb-4 group-hover:scale-110 transition-transform">
+            <stat.icon className="w-8 h-8 text-primary" />
           </div>
-        </div>
-      </section>
+          <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
+            {stat.value}
+          </div>
+          <div className="text-gray-300 dark:text-gray-600 font-medium">{stat.label}</div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 lg:py-32">

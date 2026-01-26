@@ -201,7 +201,7 @@ const Home = () => {
                       />
                     ))}
                   </div>
-                  <span>50K+ users trust us</span>
+                  <span>100+ users trust us</span>
                 </div>
                 <div className="flex items-center gap-1">
                   {[1, 2, 3, 4, 5].map((i) => (
@@ -260,38 +260,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="relative py-12 md:py-16 bg-gradient-to-br from-foreground via-foreground/95 to-foreground text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent rounded-full blur-3xl" />
-        </div>
-
-        <div className="section-container relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/20 backdrop-blur-sm mb-4 group-hover:scale-110 transition-transform">
-                  <stat.icon className="w-7 h-7 text-primary" />
-                </div>
-                <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-primary-foreground/70 text-sm md:text-base font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+    {/* Stats Section */}
+<section className="relative py-12 md:py-16 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 dark:from-gray-100 dark:via-gray-50 dark:to-gray-100 text-white dark:text-gray-900 overflow-hidden">
+  <div className="absolute inset-0 opacity-5 dark:opacity-10">
+    <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary rounded-full blur-3xl" />
+    <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent rounded-full blur-3xl" />
+  </div>
+  
+  <div className="section-container relative z-10">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      {stats.map((stat, index) => (
+        <motion.div
+          key={stat.label}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="text-center group"
+        >
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/20 dark:bg-primary/30 backdrop-blur-sm mb-4 group-hover:scale-110 transition-transform">
+            <stat.icon className="w-7 h-7 text-primary" />
           </div>
-        </div>
-      </section>
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
+            {stat.value}
+          </div>
+          <div className="text-gray-300 dark:text-gray-600 text-sm md:text-base font-medium">
+            {stat.label}
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+ 
 
       {/* Features Section */}
       <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/30">
@@ -345,11 +346,11 @@ const Home = () => {
               className="relative"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                {/* Replace with your mission image */}
-                <ImagePlaceholder
-                  aspectRatio="video"
-                  label="Mission & Vision"
-                  className="w-full"
+                {/* mission image */}
+                <img
+                  src="/public/Mission and Vission.png"
+                  alt="HandsOn Communicator Glove"
+                  className="w-[80rem] h-[40rem] object-cover rounded-3xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
               </div>

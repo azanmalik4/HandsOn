@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Hand, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "../../pages/ThemeToggle"; // ADD THIS
 import logo from '../../../public/handsON.jpeg';
 
 const navLinks = [
@@ -10,6 +11,7 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Achievements", path: "/achievements" },
   { name: "Information", path: "/information" },
+  { name: "Product", path: "/product" }, // ADD THIS
   { name: "Contact", path: "/contact" },
 ];
 
@@ -31,7 +33,6 @@ export const Navbar = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.pathname]);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -64,7 +65,6 @@ export const Navbar = () => {
                     className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
-                {/* Glow effect on hover */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary to-accent opacity-0 group-hover:opacity-50 blur-xl transition-opacity -z-10" />
               </div>
               <div className="hidden sm:block">
@@ -90,7 +90,6 @@ export const Navbar = () => {
                   }`}
                 >
                   {link.name}
-                  {/* Active indicator */}
                   {location.pathname === link.path && (
                     <motion.div
                       layoutId="activeNav"
@@ -98,26 +97,16 @@ export const Navbar = () => {
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
-                  {/* Hover effect */}
                   <span className={`absolute inset-0 bg-secondary rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity ${
                     location.pathname === link.path ? 'hidden' : ''
                   }`} />
                 </Link>
               ))}
-              <Button 
-                className="ml-2 lg:ml-4 shadow-lg hover:shadow-xl transition-all group relative overflow-hidden" 
-                size="sm"
-                asChild
-              >
-                <Link to="/contact">
-                  <span className="relative z-10 flex items-center gap-2">
-                    Get Started
-                    <Sparkles className="w-3 h-3 group-hover:rotate-12 transition-transform" />
-                  </span>
-                  {/* Animated gradient background */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity bg-[length:200%_100%] animate-gradient" />
-                </Link>
-              </Button>
+              
+              {/* Theme Toggle - REPLACES Get Started Button */}
+              <div className="ml-2 lg:ml-4 flex items-center gap-3">
+                <ThemeToggle />
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -163,7 +152,6 @@ export const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -173,7 +161,6 @@ export const Navbar = () => {
               onClick={() => setIsOpen(false)}
             />
 
-            {/* Mobile Menu */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -182,7 +169,6 @@ export const Navbar = () => {
               className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-card border-l border-border z-40 md:hidden overflow-y-auto"
             >
               <div className="flex flex-col h-full">
-                {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-border">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
@@ -199,7 +185,6 @@ export const Navbar = () => {
                   </div>
                 </div>
 
-                {/* Navigation Links */}
                 <div className="flex-1 px-6 py-8 space-y-2">
                   {navLinks.map((link, index) => (
                     <motion.div
@@ -225,34 +210,18 @@ export const Navbar = () => {
                   ))}
                 </div>
 
-                {/* CTA Button */}
-                <div className="p-6 border-t border-border">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: navLinks.length * 0.05 }}
-                  >
-                    <Button 
-                      className="w-full shadow-lg group relative overflow-hidden" 
-                      size="lg"
-                      asChild
-                    >
-                      <Link to="/contact">
-                        <span className="relative z-10 flex items-center justify-center gap-2">
-                          Get Started
-                          <Sparkles className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </Link>
-                    </Button>
-                  </motion.div>
+                <div className="p-6 border-t border-border space-y-4">
+                  {/* Theme Toggle for Mobile */}
+                  <div className="flex items-center justify-between p-4 rounded-xl bg-secondary/50">
+                    <span className="text-sm font-medium text-foreground">Dark Mode</span>
+                    <ThemeToggle />
+                  </div>
 
-                  {/* Social Links or Additional Info */}
                   <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="text-center text-sm text-muted-foreground mt-4"
+                    className="text-center text-sm text-muted-foreground"
                   >
                     Breaking barriers in communication
                   </motion.p>
@@ -262,24 +231,6 @@ export const Navbar = () => {
           </>
         )}
       </AnimatePresence>
-
-      {/* Add gradient animation to CSS */}
-      <style>{`
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-        .animate-gradient {
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
     </>
   );
 };
