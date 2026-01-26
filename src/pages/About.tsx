@@ -371,6 +371,8 @@ const About = () => {
                   src="/public/Team Image.jpg "
                   alt="HandsOn Communicator Glove"
                   className="w-[80rem] h-[30rem] object-cover rounded-3xl"
+                  width={300}
+                  height={200}
                 />
             </div>
             <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-primary to-accent rounded-3xl opacity-20 blur-3xl -z-10" />
