@@ -340,7 +340,7 @@ const Achievements = () => {
                   <div className="relative rounded-3xl overflow-hidden shadow-card hover:shadow-elevated transition-all border border-border group-hover:border-primary/30">
                     {/* Replace with: <img src={`/certificate-${i + 1}.jpg`} alt={label} className="w-full h-full object-cover" /> */}
                     <img
-                      src="/public/Innovista startup league.jpg"
+                      src="/Innovista startup league.jpg"
                       alt="HandsOn Communicator Glove"
                       className="w-[80rem] h-[20rem] object-cover rounded-3xl"
                     />

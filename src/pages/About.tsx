@@ -199,7 +199,7 @@ const About = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 mix-blend-overlay z-10" />
                 <img
-                  src="/public/Team photo 1.jpg"
+                  src="Team photo 1.jpg"
                   alt="HandsOn Team"
                   className="w-full h-[45rem] object-cover rounded-2xl"
                 />
@@ -368,7 +368,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/10 mix-blend-overlay z-10" />
               {/* Team Image */}
               <img
-                  src="/public/Team_Image.jpg "
+                  src="/Team_Image.jpg "
                   alt="HandsOn Communicator Glove"
                   className="w-[80rem] h-[30rem] object-cover rounded-3xl"
                 />
