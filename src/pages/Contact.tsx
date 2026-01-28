@@ -344,7 +344,7 @@ const Contact = () => {
       transition={{ duration: 0.6 }}
       className="relative rounded-3xl overflow-hidden shadow-2xl border border-border"
     >
-      {/* Styled Google Maps - Add &style parameters for custom colors */}
+      {/* Styled Google Maps */}
       <iframe
        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3040.98454767249!2d67.06033300319046!3d24.98786480823706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1769584507413!5m2!1sen!2s"
         width="100%"
