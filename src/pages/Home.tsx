@@ -78,20 +78,20 @@ const socialLinks = [
 const testimonials = [
   {
     quote:
-      "HandsOn Communicator has transformed how I communicate at work. It's incredibly accurate!",
-    author: "Sarah M.",
-    role: "Software Engineer",
+      "HandsOn Communicator has the potential to transforme how deaf communicate forever.",
+    author: "Umair Ahmed khan",
+    role: "Incubation head at IU Core",
   },
   {
     quote:
       "Finally, technology that truly understands the needs of the deaf community.",
-    author: "David L.",
+    author: "Faiza Javaid",
     role: "Teacher",
   },
   {
     quote:
       "The real-time translation is seamless. This is the future of accessibility.",
-    author: "Emily R.",
+    author: "Dr. Zubair Ahmed",
     role: "Healthcare Professional",
   },
 ];
