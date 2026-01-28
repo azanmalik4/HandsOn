@@ -14,6 +14,7 @@ import {
 import { Layout } from "@/components/layout/Layout";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Linkedin, Mail, Github } from "lucide-react";
 
 
 const teamValues = [
@@ -59,6 +60,31 @@ const stats = [
   { value: "100+", label: "Users", icon: Users },
   { value: "98%", label: "Accuracy", icon: TrendingUp },
   { value: "5+", label: "Languages", icon: Zap },
+];
+
+const teamMembers = [
+  {
+    name: "Muhammad Abrar Iqbal",
+    role: "Chief Executive Officer",
+    designation: "CEO & Founder",
+    image: "/Abrar.jpg", 
+    bio: "Visionary leader with 10+ years in bussiness development and SEO expert.",
+    linkedin: "https://www.linkedin.com/in/mabrariqbal/",
+    email: "emosticabrar2@gmail.com",
+    github: "#",
+    expertise: ["SEO", "Product Strategy", "Leadership"]
+  },
+  {
+    name: "Muhammad Azan Shakil",
+    role: "Chief Technology Officer",
+    designation: "CTO & Co-Founder",
+    image: "/Azan.jpg",
+    bio: "Expert in software development as well as in data enginnering .",
+    linkedin: "https://www.linkedin.com/in/azan-shakil-673047248/",
+    email: "azanmalik067@gmail.com",
+    github: "https://github.com/azanmalik4",
+    expertise: ["Computer Vision", "Development", "Data Processing"]
+  },
 ];
 
 const About = () => {
@@ -378,6 +404,197 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      
+      {/* Team Members Section */}
+<section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/30">
+  <div className="section-container">
+    <SectionHeading
+      badge="Leadership"
+      title="The Minds Behind the Innovation"
+      description="Meet the passionate individuals driving HandsOn Communicator forward."
+    />
+
+    {/* Centered wrapper for 2 cards */}
+    <div className="max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+        {teamMembers.slice(0, 2).map((member, index) => (
+          <motion.div
+            key={member.name}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="group relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            
+            <div className="relative bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elevated transition-all border border-border group-hover:border-primary/30">
+              {/* Image */}
+              <div className="relative h-[30rem] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent z-10" />
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Social Links Overlay */}
+                <div className="absolute bottom-4 left-4 right-4 z-20 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <a
+                    href={member.linkedin}
+                    className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-primary flex items-center justify-center transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-4 h-4 text-white" />
+                  </a>
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-primary flex items-center justify-center transition-colors"
+                    aria-label="Email"
+                  >
+                    <Mail className="w-4 h-4 text-white" />
+                  </a>
+                  <a
+                    href={member.github}
+                    className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-primary flex items-center justify-center transition-colors"
+                    aria-label="GitHub"
+                  >
+                    <Github className="w-4 h-4 text-white" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="p-6 md:p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                  {member.name}
+                </h3>
+                <p className="text-primary font-semibold text-base mb-4">
+                  {member.designation}
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  {member.bio}
+                </p>
+                
+                {/* Expertise Tags */}
+                <div className="flex flex-wrap gap-2">
+                  {member.expertise.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 bg-primary/10 dark:bg-primary/20 text-primary text-xs font-medium rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Horizontal section  */}
+
+{/* <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/30">
+  <div className="section-container">
+    <SectionHeading
+      badge="Leadership"
+      title="The Minds Behind the Innovation"
+      description="Meet the passionate individuals driving HandsOn Communicator forward."
+    /> */}
+
+    {/* Centered wrapper with max width */}
+    {/* <div className="max-w-6xl mx-auto space-y-8">
+      {teamMembers.slice(0, 2).map((member, index) => (
+        <motion.div
+          key={member.name}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="group relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+          
+          <div className="relative bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elevated transition-all border border-border group-hover:border-primary/30">
+            <div className="grid md:grid-cols-5 gap-6 p-6 md:p-10"> */}
+              {/* Image */}
+              {/* <div className="md:col-span-2">
+                <div className="relative h-80 md:h-full rounded-2xl overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent" />
+                </div>
+              </div> */}
+
+              {/* Info */}
+              {/* <div className="md:col-span-3 flex flex-col">
+                <div className="flex-1">
+                  <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary font-bold text-lg mb-6">
+                    {member.designation}
+                  </p>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    {member.bio}
+                  </p> */}
+                  
+                  {/* Expertise Tags */}
+                  {/* <div className="flex flex-wrap gap-2 mb-6">
+                    {member.expertise.map((skill, i) => (
+                      <span
+                        key={i}
+                        className="px-4 py-2 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-medium rounded-lg"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div> */}
+
+                {/* Social Links */}
+                {/* <div className="flex gap-3 pt-6 border-t border-border">
+                  <a
+                    href={member.linkedin}
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary hover:bg-primary hover:text-white transition-colors group/link"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span className="text-sm font-medium">LinkedIn</span>
+                  </a>
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary hover:bg-primary hover:text-white transition-colors group/link"
+                    aria-label="Email"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span className="text-sm font-medium">Email</span>
+                  </a>
+                  <a
+                    href={member.github}
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary hover:bg-primary hover:text-white transition-colors group/link"
+                    aria-label="GitHub"
+                  >
+                    <Github className="w-5 h-5" />
+                    <span className="text-sm font-medium">GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section> */}
+
     </Layout>
   );
 };

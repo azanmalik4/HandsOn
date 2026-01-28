@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Clock, MessageSquare, CheckCircle, Sparkles } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, MessageSquare, CheckCircle, Sparkles, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -335,40 +335,55 @@ const Contact = () => {
       </section>
 
       {/* Map Placeholder */}
-      <section className="pb-16 md:pb-24 lg:pb-32">
-        <div className="section-container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <div className="w-full h-80 md:h-96 flex items-center justify-center bg-gradient-to-br from-secondary to-secondary/50 border-2 border-dashed border-border">
-                <div className="text-center p-8">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <MapPin className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground mb-2">
-                    Our Location
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Power House Chowrangi Karachi
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    Interactive map 
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-primary to-accent rounded-3xl opacity-20 blur-3xl -z-10" />
-            <div className="absolute -top-8 -left-8 w-40 h-40 bg-gradient-to-br from-accent to-primary rounded-3xl opacity-20 blur-3xl -z-10" />
-          </motion.div>
-        </div>
-      </section>
+     <section className="pb-16 md:pb-24">
+  <div className="section-container">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="relative rounded-3xl overflow-hidden shadow-2xl border border-border"
+    >
+      {/* Styled Google Maps - Add &style parameters for custom colors */}
+      <iframe
+       src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3040.98454767249!2d67.06033300319046!3d24.98786480823706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1769584507413!5m2!1sen!2s"
+        width="100%"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="HandsOn Communicator Location"
+        className="w-full h-96 md:h-[450px] grayscale hover:grayscale-0 transition-all duration-500"
+      />
+      
+      {/* Floating Action Buttons */}
+      <div className="absolute top-6 right-6 flex flex-col gap-3">
+        <a
+          href="https://maps.app.goo.gl/jNfWXArtkz3DnDa9A"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 rounded-xl bg-card/95 backdrop-blur-xl border border-border hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all shadow-lg group"
+          title="Open in Google Maps"
+        >
+          <MapPin className="w-5 h-5" />
+        </a>
+        <button
+          onClick={() => navigator.clipboard.writeText('123 Innovation Drive, Tech City, TC 12345')}
+          className="w-12 h-12 rounded-xl bg-card/95 backdrop-blur-xl border border-border hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all shadow-lg group"
+          title="Copy Address"
+        >
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+        </button>
+      </div>
+    </motion.div>
+  </div>
+</section>
     </Layout>
   );
 };
 
 export default Contact;
+
